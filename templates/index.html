@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Events Information</h1>
+{% for event in events %}
+<div>
+    <a href="/{{events.index(event)}}">{{event.event_name}}</a>
+</div>
+{% endfor %}
+
+<form action="/" method="POST">
+    <label for="event_date">Event Date: </label>
+    <input type="text" name="event_date" id="event_date">
+
+    <label for="event_name">Event Name: </label>
+    <input type="text" name="event_name" id="event_name">
+
+    <label for="num_of_guests">Number of Guests: </label>
+    <input type="text" name="num_of_guests" id="num_of_guests">
+
+    <label for="room_location">Room Location: </label>
+    <input type="text" name="room_location" id="room_location">
+
+    <label for="event_description">Event Info: </label>
+    <textarea name="event_description" id="event_description" rows="3" cols="30"></textarea>
+
+    <label for="recurring">Recurring: </label>
+    <input type="checkbox" name="recurring" id="recurring" value="True">
+
+    <input type="submit" value="Create Event">
+
+    
+
+</form>
+
+{% endblock %}

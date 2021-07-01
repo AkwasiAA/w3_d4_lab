@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+    <p>Date: {{event.date}}</p>
+    <p>Event Name: {{event.event_name}}</p>
+    <p>Guests: {{event.num_of_guests}}</p>
+    <p>Room Location: {{event.room_location}}</p>
+    <p>Description: {{event.event_description}}</p>
+    <p>Recurring: {{event.recurring}}</p>
+<a href="/">Back</a>
+
+{% endblock %}
